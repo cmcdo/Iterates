@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\setlength\parindent{0pt}
+
+%ShortCuts
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Hp}{\mathbb{H}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\F}{\mathcal{F}}
+
+%Environ
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+\title{Concise Description of the Sequences of Conformal Iterates of the Unit Disk}
+
+\author{Clayton McDonald}
+
+\begin{document}
+\maketitle
+\begin{theorem}[Iterates of $\D$]
+    Let $f:\D\to\D$ be a biholomorphism, that is bijective and holomorphic (hence conformal) self map of $\D$, then $f$ takes the form
+    \begin{equation*}
+        f(z) = e^{i\theta} \frac{z-a}{1-\overline{a}z}
+    \end{equation*}
+Where $a\in\D$ and $\theta\in\R$
+\end{theorem}
+We wish to fully explain the condition for convergence of the sequence of iterates of functions of this form.
+The reason for doing so, is due to the Riemann mapping theorem if we can solve this problem on this domain, we will be able to fully understand
+the iterates for any domain of $\C$. 
+\begin{theorem}[Reimann Mapping Theorem]
+Let $\Omega\subset\C$ be a domain of $\C$, then for all $z_0\in\Omega$ there exists some biholomorphism $F:\Omega\to\D$ such that $F(z_0) = 0$ and $F'(z_0)>0$
+\end{theorem}
+\begin{corollary}
+    Any two domains of $\C$, say $\Omega_1$ $\Omega_2$ are conformally equivalent, meaning there exists some biholomorphism between them.
+\end{corollary}
+To see why, let $F_i$ be the biholomorphisms from $\Omega_i$ to $\D$, then clearly $F_2^{-1} \circ F_1:\Omega_1\to\Omega_2$ and clearly a biholomorphism
+
+\end{document}
