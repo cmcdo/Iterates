@@ -5,7 +5,7 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \setlength\parindent{0pt}
 
-%ShortCuts
+% ShortCuts
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -27,6 +27,8 @@
 
 \begin{document}
 \maketitle
+\section{Prerequisite Tools}
+
 \begin{theorem}[Iterates of $\D$]
     Let $f:\D\to\D$ be a biholomorphism, that is bijective and holomorphic (hence conformal) self map of $\D$, then $f$ takes the form
     \begin{equation*}
@@ -43,6 +45,14 @@ Let $\Omega\subset\C$ be a domain of $\C$, then for all $z_0\in\Omega$ there exi
 \begin{corollary}
     Any two domains of $\C$, say $\Omega_1$ $\Omega_2$ are conformally equivalent, meaning there exists some biholomorphism between them.
 \end{corollary}
-To see why, let $F_i$ be the biholomorphisms from $\Omega_i$ to $\D$, then clearly $F_2^{-1} \circ F_1:\Omega_1\to\Omega_2$ and clearly a biholomorphism
-
+To see why, let $F_i$ be the biholomorphisms from $\Omega_i$ to $\D$, then clearly $F_2^{-1} \circ F_1:\Omega_1\to\Omega_2$ and clearly a biholomorphism \\ 
+\begin{theorem}[The Hyperbolic Plane]
+    Consider the metric space $\mathcal{D} = (\D, d_\D)$ where $d_\D$ is defined by
+    \begin{equation*}
+        d_\D (z, w) = 2 \tanh^{-1}\bigg|\frac{z-w}{1-z\overline{w}} \bigg|
+    \end{equation*}
+We call this this Hyperbolic Plane.
+\end{theorem}
+The key to this space is that the biholomorphisms of $\D$ are the isometries of $\mathcal{D}$, this fact we will exploit to study the sequences of iterates of the biholomorphisms of $\D$
+\section{Iterates on $\D$}
 \end{document}
