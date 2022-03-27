@@ -176,6 +176,7 @@ while r:
     changingZ0()
     plotPoints(display)
     plotPoint(display, computingFixedPoints()[1])
+    pygame.gfxdraw.aacircle(display, W//2, H//2, int(rad * abs(math.sin(theta/2))), (0, 255, 0))
     pg.display.flip()
 
 quit()

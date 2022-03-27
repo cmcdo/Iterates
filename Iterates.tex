@@ -67,21 +67,14 @@ First, setting $f(z) = z$ and solving we will find a quadratic equation, hence t
     From this one may see, $d_\D(z_n, z^*) = 2 \tanh^{-1}\bigg|\frac{z_n - z^*}{1-\overline{z^*}z_n} \bigg|  = K$ which we then see 
 
     \begin{equation*}
-        d_E(z_n, z^*) = K'|1-\overline{z^*}z_n| = K'|1-\overline{z^*}z_0| 
+        d_E(z_n, z^*) = K'|1-\overline{z^*}z_n|
     \end{equation*}
-    Hence, we cannot have convergence,
+    We cannot have convergence as the RHS of this equation does not tend to zero. For $w, z\in\D$ clearly $|w||z| < 1$ so the term $|1-\overline{z^*}z_n|$ is bounded below by some constant $c\in\R^+$
 \end{proof}
-Just for the time being.
-\begin{equation*}
-    uz- ua =  z(1-\overline{a}z) = z - \overline{a}z^2 
-\end{equation*}
-\begin{equation*}
-    uz - z - ua + \overline{a}z^2 = 0
-\end{equation*}
-\begin{equation*}
-    \overline{a}z^2 + (u-1)z - ua = 0
-\end{equation*}
-\begin{equation*}
-    z = \frac{1}{2\overline{a}} \bigg( (1-u) \pm \sqrt{(u-1)^2 - 4u|a|^2}\bigg)
-\end{equation*}
+\begin{theorem}
+    Let $f:\D\to\D$ be a biholomorphism of $\D$ in the usual form, then the sequence of iterates converges if and only if $|a| > \sin(\theta/2)$
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 \end{document}
