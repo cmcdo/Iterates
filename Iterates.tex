@@ -55,4 +55,33 @@ We call this this Hyperbolic Plane.
 \end{theorem}
 The key to this space is that the biholomorphisms of $\D$ are the isometries of $\mathcal{D}$, this fact we will exploit to study the sequences of iterates of the biholomorphisms of $\D$
 \section{Iterates on $\D$}
+First, setting $f(z) = z$ and solving we will find a quadratic equation, hence these biholomorphisms have at most two unique fixed points.
+\begin{theorem}
+    Let $f$ be a biholomorphism of $\D$, if we have a fixed point $z^*\in\D$ then the sequence defined by $z_n = f(z_{n-1})$ with $z_0\in\D\setminus\{z^*\}$ will not converge.
+\end{theorem}
+\begin{proof}
+    We noted before that $f$ must be a hyperbolic isometry, we know that these sequences of iterates must only converge to fixed points, however
+    \begin{equation*}
+        d_\D(f(z_n), f(z^*)) = d_\D(z_n, z^*) = d_\D(z_0, z^*) = K
+    \end{equation*}
+    From this one may see, $d_\D(z_n, z^*) = 2 \tanh^{-1}\bigg|\frac{z_n - z^*}{1-\overline{z^*}z_n} \bigg|  = K$ which we then see 
+
+    \begin{equation*}
+        d_E(z_n, z^*) = K'|1-\overline{z^*}z_n| = K'|1-\overline{z^*}z_0| 
+    \end{equation*}
+    Hence, we cannot have convergence,
+\end{proof}
+Just for the time being.
+\begin{equation*}
+    uz- ua =  z(1-\overline{a}z) = z - \overline{a}z^2 
+\end{equation*}
+\begin{equation*}
+    uz - z - ua + \overline{a}z^2 = 0
+\end{equation*}
+\begin{equation*}
+    \overline{a}z^2 + (u-1)z - ua = 0
+\end{equation*}
+\begin{equation*}
+    z = \frac{1}{2\overline{a}} \bigg( (1-u) \pm \sqrt{(u-1)^2 - 4u|a|^2}\bigg)
+\end{equation*}
 \end{document}

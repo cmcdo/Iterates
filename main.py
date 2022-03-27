@@ -88,6 +88,7 @@ def changingZ0():
 
 
 #Mobius and Complex math
+    
 def complexAbs(z):
     return (z[0]**2 + z[1]**2)**(1/2)
 
@@ -107,6 +108,12 @@ def complexMultiply(z, w):
 def complexDivide(z, w):
     return complexMultiply(z, complexInvert(w))
 
+
+def complexpow(z, n):
+    r = complexAbs(z)**(n)
+    t  = math.atan2(z[1], z[0])
+    return [r*math.cos(t*n), r*math.sin(t*n)]
+
 def mob(z):
     u = [math.cos(theta), math.sin(theta)]
     nume = complexMinus(complexMultiply(u,z), complexMultiply(u, a))
@@ -123,12 +130,27 @@ def mobList(z0, n):
     return iterateList
 
 def plotPoints(surf):
-    iterates = mobList(z0, 100)
+    iterates = mobList(z0, 1000)
     for iterate in iterates:
         icord = plane2screen(iterate[0], iterate[1])
-        pg.draw.rect(surf, (0, 0, 0), (icord[0], icord[1], 4, 4))
+        aafilledcircle(surf, icord[0], icord[1], 2, (0, 0, 0))
 
-print(mobList([0,0], 10))
+
+def plotPoint(surf, x):
+    x = plane2screen(x[0], x[1])
+    aafilledcircle(surf, x[0], x[1], 2, (0, 0, 0))
+
+def computingFixedPoints():
+    u = [math.cos(theta), math.sin(theta)]
+    um12 = complexpow(complexMinus(u,[1,0]) , 2)
+    fua2 = complexMultiply(u, [4*complexAbs(a)**2, 0])
+    rootterm = complexpow(complexAdd(um12, fua2), 1/2)
+    
+    r1 = complexDivide(complexAdd(complexMinus([1,0],u),rootterm),complexMultiply([2, 0],[a[0], -a[1]]))
+    r2 = complexDivide(complexMinus(complexMinus([1,0],u),rootterm),complexMultiply([2, 0],[a[0], -a[1]])) 
+    
+    return [r1, r2]
+
 while r:
     W, H = display.get_size()
     mx, my = pg.mouse.get_pos()
@@ -153,6 +175,7 @@ while r:
     changingA()
     changingZ0()
     plotPoints(display)
+    plotPoint(display, computingFixedPoints()[1])
     pg.display.flip()
 
 quit()
