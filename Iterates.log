@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.7)  27 MAR 2022 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.7)  28 MAR 2022 23:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -200,10 +200,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 (C:\Users\cmcdo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
 [1
 
 {C:/Users/cmcdo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
@@ -235,7 +231,7 @@ rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/cmcdo/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/c
 mcdo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pf
 b>
-Output written on Iterates.pdf (2 pages, 175068 bytes).
+Output written on Iterates.pdf (2 pages, 176084 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
