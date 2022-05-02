@@ -9,12 +9,12 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\Hp}{\mathbb{H}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\HH}{\mathbb{H}}
 \newcommand{\eps}{\epsilon}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\F}{\mathcal{F}}
-
+\newcommand{\ov}{\overline}
 %Environ
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -29,58 +29,86 @@
 \maketitle
 \section{Prerequisite Tools}
 
-\begin{theorem}[Iterates of $\D$]
-    Let $f:\D\to\D$ be a biholomorphism, that is bijective and holomorphic (hence conformal) self map of $\D$, then $f$ takes the form
+\begin{theorem}[Iterates of $\DD$]
+    Let $f:\DD\to\DD$ be a biholomorphism, that is bijective and holomorphic (hence conformal) self map of $\DD$, then $f$ takes the form
     \begin{equation*}
         f(z) = e^{i\theta} \frac{z-a}{1-\overline{a}z}
     \end{equation*}
-Where $a\in\D$ and $\theta\in\R$
+Where $a\in\DD$ and $\theta\in\R$
 \end{theorem}
 We wish to fully explain the condition for convergence of the sequence of iterates of functions of this form.
 The reason for doing so, is due to the Riemann mapping theorem if we can solve this problem on this domain, we will be able to fully understand
 the iterates for any domain of $\C$. 
 \begin{theorem}[Reimann Mapping Theorem]
-Let $\Omega\subset\C$ be a domain of $\C$, then for all $z_0\in\Omega$ there exists some biholomorphism $F:\Omega\to\D$ such that $F(z_0) = 0$ and $F'(z_0)>0$
+Let $\Omega\subset\C$ be a domain of $\C$, then for all $z_0\in\Omega$ there exists some biholomorphism $F:\Omega\to\DD$ such that $F(z_0) = 0$ and $F'(z_0)>0$
 \end{theorem}
 \begin{corollary}
     Any two domains of $\C$, say $\Omega_1$ $\Omega_2$ are conformally equivalent, meaning there exists some biholomorphism between them.
 \end{corollary}
-To see why, let $F_i$ be the biholomorphisms from $\Omega_i$ to $\D$, then clearly $F_2^{-1} \circ F_1:\Omega_1\to\Omega_2$ and clearly a biholomorphism. 
+To see why, let $F_i$ be the biholomorphisms from $\Omega_i$ to $\DD$, then clearly $F_2^{-1} \circ F_1:\Omega_1\to\Omega_2$ and clearly a biholomorphism. 
 Another important takeaway from this theorem is the following, let $\Omega$ be some domain in $\C$, and let $\phi:\Omega\to\Omega$ be the biholomorphisms of $\Omega$
-Let $F:\Omega\to\D$ be the biholomorphism from $\Omega$ to $\D$, then $\phi = F^{-1}\circ f\circ F$ where $f$ is a biholomorphism of the disk 
+Let $F:\Omega\to\DD$ be the biholomorphism from $\Omega$ to $\DD$, then $\phi = F^{-1}\circ f\circ F$ where $f$ is a biholomorphism of the disk 
 \begin{theorem}[The Hyperbolic Plane]
-    Consider the metric space $\mathcal{D} = (\D, d_\D)$ where $d_\D$ is defined by
+    Consider the metric space $\mathcal{D} = (\DD, d_\DD)$ where $d_\DD$ is defined by
     \begin{equation*}
-        d_\D (z, w) = 2 \tanh^{-1}\bigg|\frac{z-w}{1-z\overline{w}} \bigg|
+        d_\DD (z, w) = 2 \tanh^{-1}\bigg|\frac{z-w}{1-z\overline{w}} \bigg|
     \end{equation*}
 We call this this Hyperbolic Plane.
 \end{theorem}
-The key to this space is that the biholomorphisms of $\D$ are the isometries of $\mathcal{D}$, this fact we will exploit to study the sequences of iterates of the biholomorphisms of $\D$
-\section{Iterates on $\D$}
+The key to this space is that the biholomorphisms of $\DD$ are the isometries of $\mathcal{D}$, this fact we will exploit to study the sequences of iterates of the biholomorphisms of $\DD$
+\section{Iterates on $\DD$}
 First, setting $f(z) = z$ and solving we will find a quadratic equation, hence these biholomorphisms have at most two unique fixed points.
 \begin{theorem}
-    Let $f$ be a biholomorphism of $\D$, if we have a fixed point $z^*\in\D$ then the sequence defined by $z_n = f(z_{n-1})$ with $z_0\in\D\setminus\{z^*\}$ will not converge.
+    Let $f$ be a biholomorphism of $\DD$, if we have a fixed point $z^*\in\DD$ then the sequence defined by $z_n = f(z_{n-1})$ with $z_0\in\DD\setminus\{z^*\}$ will not converge.
 \end{theorem}
 \begin{proof}
     We noted before that $f$ must be a hyperbolic isometry, we know that these sequences of iterates must only converge to fixed points, however
     \begin{equation*}
-        d_\D(f(z_n), f(z^*)) = d_\D(z_n, z^*) = d_\D(z_0, z^*) = K
+        d_\DD(f(z_n), f(z^*)) = d_\DD(z_n, z^*) = d_\DD(z_0, z^*) = K
     \end{equation*}
-    From this one may see, $d_\D(z_n, z^*) = 2 \tanh^{-1}\bigg|\frac{z_n - z^*}{1-\overline{z^*}z_n} \bigg|  = K$ which we then see 
+    From this one may see, $d_\DD(z_n, z^*) = 2 \tanh^{-1}\bigg|\frac{z_n - z^*}{1-\overline{z^*}z_n} \bigg|  = K$ which we then see 
 
     \begin{equation*}
         d_E(z_n, z^*) = K'|1-\overline{z^*}z_n|
     \end{equation*}
-    We cannot have convergence as the RHS of this equation does not tend to zero. For $w, z\in\D$ clearly $|w||z| < 1$ so the term $|1-\overline{z^*}z_n|$ is bounded below by some constant $c\in\R^+$
+    We cannot have convergence as the RHS of this equation does not tend to zero. For $w, z\in\DD$ clearly $|w||z| < 1$ so the term $|1-\overline{z^*}z_n|$ is bounded below by some constant $c\in\R^+$
 \end{proof}
 \begin{theorem}
-    Let $f:\D\to\D$ be a biholomorphism of $\D$ in the usual form, then the sequence of iterates converges if and only if $|a| > \sin(\theta/2)$
+    Let $f:\DD\to\DD$ be a biholomorphism of $\DD$ in the usual form, then the sequence of iterates converges if and only if $|a| > \sin(\theta/2)$
 \end{theorem}
 \begin{proof}
-    First we must consider the Cayley Transformation, $F:\Hp\to\D$ given by
-    \begin{equation*}
-        F(z) = \frac{z - i}{z + i}
-    \end{equation*}
-    We can express any biholomorphism in $\Hp$ as $F^{-1}\circ f \circ F$ where $f$ is a biholomorphism of $\D$.
+We will start the proof by creating an equivalent theorem in $\HH$. Let $F:\HH\to\DD$ be the Cayley transformation and let $\Phi(z)$ be a conformal automorphism of $\HH$. Then $F\circ \Phi \circ F^{-1}$ is a conformal automorphism $\DD$, as $F$ is a biholomorphism. Computing this we find the following
+\begin{equation*}
+        F\circ \Phi \circ F^{-1}(z) = \frac{z((d+a)+i(b-c))+(a-d)-i(b+c)}{z((a-d)+i(b+c))+a+d+i(c-b)} = \frac{\lambda z + \ov{\alpha}}{\alpha  z + \ov{\lambda}}
+\end{equation*}
+Furthermore we must be able to write this in the usual form
+\begin{equation*}
+        \frac{\lambda z + \ov{\alpha}}{\alpha  z + \ov{\lambda}} = e^{i\theta} \frac{z-a}{1-\ov{a}z}
+\end{equation*}
+Immediately we see $a=\alpha/\ov{\lambda}$ and $e^{i\theta} = \lambda/\ov{\lambda}$. Now, given the theorem holds we are given the following condition for convergence for the sequences of conformal automorphisms of $\HH$, that is 
+\begin{equation*}
+         \bigg|\frac{\alpha}{\ov{\lambda}}\bigg| > \sqrt{\frac{1-\Re(\lambda/\ov{\lambda})}{2}}
+\end{equation*}
+Which, for later computation we will simplify to the following
+\begin{equation*}
+       0>|\lambda|^2\frac{1-\Re(\lambda/\ov{\lambda})}{2} - |\alpha|^2
+\end{equation*}
+Which again simplifies down to
+\begin{equation}
+        (a-d)^2+4bc<0
+\end{equation}
+So we are given the equivalent theorem in $\HH$\\
+\begin{theorem}
+    Let $\Phi:\HH\to\HH$ be a conformal automorphism of $\HH$ in usual form, then $\Phi^{[n]}$ converges if and only if (1) holds.
+\end{theorem}
+Note that if $\Phi^{[n]}\to\infty$ we define this to be convergence, trivially this only occurs if $c=0$. This equivalent statement is actually quite easy to prove, recall if a conformal automorphism $f$ of $\DD$ has a fixed point $z^*\in\DD$ then the sequence of iterates do not converge. Taking this to the upper half plane if we have a fixed point in $\HH$ then we cannot have convergence, finding such a fixed point is easy here, letting $\Phi(z)=z$ we find.
+\begin{equation*}
+        cz^2+z(d-a)-b=0
+\end{equation*}
+Then by the quadratic formula
+\begin{equation*}
+        z = \frac{a-d}{2c} + \frac{\sqrt{(a-d)^2+4bc}}{2c}
+\end{equation*}
+We ignore the negative square root as we are working in $\HH$. Since all coefficients are real we simply need $(a-d)^2+4bc<0$ to have non-convergence of $\Phi^{[n]}$. If $(a-d)^2+4bc\geq0$ we will have a fixed point $z^*\in\ov{\R}$ so we must have $\Phi^{[n]}\to z^*$ as this is equivalent for the function $f = F\circ\Phi\circ F^{-1}$ to have a fixed point $w*\in\partial\DD$ and we already know that $f^{[n]}\to w^*=F(z^*)$. Therefore $\Phi$ converges if and only if (1) holds, proving theorem (0.2). This proves our original theorem as well. If we had some $a\in\DD$ $|a|\leq\sin(\theta/2)$ such that $f^{[n]}\to z^*$ then we must have convergence for $\Phi(z) = F^{-1}\circ f \circ F$ by continuity, yet this contradicts theorem (0.2), so theorem (0.1) must be true
 \end{proof}
 \end{document}

@@ -17,7 +17,7 @@ def aafilledcircle(surf, x, y, r, col):
 Unit Circle Stuff.
 """
 pad = 200
-rad = 1
+rad = 2
 def drawD(surf):
     global rad
     rad = H//2 - pad
